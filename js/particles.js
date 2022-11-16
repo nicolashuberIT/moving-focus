@@ -1,9 +1,9 @@
 // --- variables ---
 
 let vectors = [];
-const num = 15000;
-const noiseScale = 0.04;
-const velocity = 3;
+const num = 25000;
+const noiseScale = 0.02;
+const velocity = 2;
 
 // display
 
@@ -61,7 +61,7 @@ function onScreen(v) {
 
 // --- interval ---
 
-var intervalID = window.setInterval(mouseReleased, 10290);
+var intervalID = window.setInterval(mouseReleased, 20000);
 
 // --- random integer value ---
 
@@ -69,4 +69,12 @@ function randomIntFromInterval(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-// 10290
+// display values in html
+
+document.getElementById("width").textContent= "Breite " + Width + " px";
+document.getElementById("height").textContent= "Höhe " + Height + " px";
+document.getElementById("color").textContent= "Farbe (rgb): " + strokeR + ", " + strokeG + ", " + strokeB;
+document.getElementById("num").textContent= "Anzahl Vektoren: " + num;
+document.getElementById("noiseScale").textContent= "Störfaktor: " + noiseScale;
+document.getElementById("velocity").textContent= "Geschwindigkeit: " + velocity;
+
