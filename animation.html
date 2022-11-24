@@ -36,11 +36,14 @@
 
             <br>
 
-            <span id="width"></span> | <span id="height"></span> <br>
-            <span id="color"></span>
-            <span id="num"></span> <br>
+            <span id="width"></span> | <span id="height"></span>
+            <br>
+            <span id="color"></span><br>
+            <span id="num"></span>
+            <br>
             <span id="velocity"></span> <br>
             <span id="noiseScale"></span> <br>
+            <span id="noiseScale2"></span>
 
             <br>
 
@@ -48,39 +51,54 @@
 
             <br>
 
-            <form>
-                <div>
-                    <p>Farbe:</p>
-                    <br>
-                    <input class="input-color" type="color">
-                </div>
-
+            <div>
+                <p>Farbe:</p>
                 <br>
-
-                <div>
-                    <p>Anzahl Vektoren:</p>
-                    <br>
-                    <input class="input-num" type="range">
-                </div>
-
-                <br>
-
-                <div>
-                    <p>Geschwindigkeit:</p>
-                    <br>
-                    <input class="input-velocity" type="range">
-                </div>
-
-                <br>
-
-                <div>
-                    <p>Störfaktor:</p>
-                    <br>
-                    <input class="input-num" type="range">
-                </div>
-            </form>
+                <input id="input-color" class="input-color" type="color" value="#7D968F" oninput="hex_value.innerText = this.value">
+                <p id="hex_value">#7D968F</p>
+            </div>
 
             <br>
+
+            <div>
+                <p>Anzahl Vektoren:</p>
+                <br>
+                <input id="input-num" class="input-num" type="range" value="25000" min="5000" max="40000" step="500" oninput="num_value.innerText = this.value">
+                <p id="num_value">35000</p>
+            </div>
+
+            <br>
+
+            <div>
+                <p>Geschwindigkeit:</p>
+                <br>
+                <input id="input-velocity" class="input-velocity" type="range" value="1" min="0.25" max="5" step="0.25" oninput="velocity_value.innerText = this.value">
+                <p id="velocity_value">1</p>
+            </div>
+
+            <br>
+
+            <div>
+                <p>Störfaktor 1:</p>
+                <br>
+                <input id="input-noiseScale" class="input-noiseScale" type="range" value="0.02" min="0.002" max="1" step="0.002" oninput="noiseScale_value.innerText = this.value">
+                <p id="noiseScale_value">0.02</p>
+            </div>
+
+            <br>
+
+            <div>
+                <p>Störfaktor 2:</p>
+                <br>
+                <input id="input-noiseScale2" class="input-noiseScale2" type="range" value="0.02" min="-10" max="10" step="1" oninput="noiseScale_value2.innerText = this.value">
+                <p id="noiseScale_value2">1</p>
+            </div>
+
+            <br>
+
+            <input type="button" value="Parameter anpassen" onclick="getInput()">
+
+            <br><br>
 
             <p>Viel Spass beim Ausprobieren!</p>
 

@@ -2,7 +2,7 @@
   position: absolute;
   background-color: rgb(255, 255, 255, 0.3);
   border-radius: 5px;
-  height: 563px;
+  height: 720px;
   width: 260px;
   top: 20px;
   left: 20px;
@@ -16,20 +16,16 @@
 
 .dashboard-values {
   position: relative;
-  top: 240px;
+  top: 325px;
   transform: translate(0, -50%);
   padding: 20px;
 }
 
-.slidecontainer {
-  width: 100%; /* Width of the outside container */
-}
-
-.slider {
+.input-num{
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
-  height: 8px;
-  border-radius: 5px;
+  height: 5px;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
@@ -37,22 +33,40 @@
   transition: opacity .2s;
 }
 
-.slider::-webkit-slider-thumb {
+.input-velocity{
   -webkit-appearance: none;
   appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #ffffff;
-  cursor: pointer;
+  width: 100%;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
 }
 
-.slider::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #ffffff;
-  cursor: pointer;
+.input-noiseScale{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.input-noiseScale2{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
