@@ -26,92 +26,92 @@
 </head>
 <body>
 
-<div class="dashboard">
-    <div class="dashboard-header">
-        <h3>Dashboard</h3>
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <h3>Dashboard</h3>
+        </div>
+        <div class="dashboard-values">
+            <i>
+
+                <h4>Aktuelle Parameter</h4>
+
+                <br>
+
+                <span id="width"></span> | <span id="height"></span>
+                <br>
+                <span id="num"></span>
+                <br>
+                <span id="color"></span>
+                <br>
+                <span id="velocity"></span>
+                <br>
+                <span id="noiseScale"></span>
+                <br>
+                <span id="noiseScale2"></span>
+
+                <br><br>
+
+                <h4>Parameter verändern</h4>
+
+                <br>
+
+                <div>
+                    <p>Geschwindigkeit:</p>
+                    <br>
+                    <input id="input-velocity" class="input-velocity" type="range" value="1" min="0.25" max="5" step="0.25" oninput="velocity_value.innerText = this.value">
+                    <p id="velocity_value">1</p>
+                </div>
+
+                <br>
+
+                <div>
+                    <p>Störfaktor 1:</p>
+                    <br>
+                    <input id="input-noiseScale" class="input-noiseScale" type="range" value="0.02" min="0.002" max="1" step="0.002" oninput="noiseScale_value.innerText = this.value">
+                    <p id="noiseScale_value">0.02</p>
+                </div>
+
+                <br>
+
+                <div>
+                    <p>Störfaktor 2:</p>
+                    <br>
+                    <input id="input-noiseScale2" class="input-noiseScale2" type="range" value="0.02" min="-10" max="10" step="1" oninput="noiseScale_value2.innerText = this.value">
+                    <p id="noiseScale_value2">1</p>
+                </div>
+
+                <br>
+
+                <input class="input-submit" type="button" value="Parameter anpassen" onclick="getInput()">
+
+                <br><br>
+
+                <p>Viel Spass beim Ausprobieren!</p>
+
+            </i>
+        </div>
     </div>
-    <div class="dashboard-values">
-        <i>
 
-            <h4>Aktuelle Parameter</h4>
+    <div class="buttons">
 
-            <br>
-
-            <span id="width"></span> | <span id="height"></span>
-            <br>
-            <span id="num"></span>
-            <br>
-            <span id="color"></span>
-            <br>
-            <span id="velocity"></span>
-            <br>
-            <span id="noiseScale"></span>
-            <br>
-            <span id="noiseScale2"></span>
-
-            <br><br>
-
-            <h4>Parameter verändern</h4>
-
-            <br>
+        <div class="buttons-header">
+            <h3>About</h3>
+        </div>
+        <div class="buttons-values">
 
             <div>
-                <p>Geschwindigkeit:</p>
-                <br>
-                <input id="input-velocity" class="input-velocity" type="range" value="1" min="0.25" max="5" step="0.25" oninput="velocity_value.innerText = this.value">
-                <p id="velocity_value">1</p>
+                <a href="" onclick="alert('Herzlich Willkommen auf dieser Website! \n\n Um das Potenzial der eingebetteten Animation voll auszuschöpfen, ist es lohnenswert, sich kurz mit der Funktionsweise und der Programmierung auseinanderzusetzen. Eine kurze Dokumentation sowie der Quellcode finden sich auf GitHub unter dem folgenden Link: https://github.com/nicolashuberIT/moving-focus \n\n Nun also zur Programmierung der Animation: Zunächst generiert das Programm eine vordefinierte Anzahl Vektoren, by default 25000, die daraufhin in einem Array abgelegt werden. Nun werden in einer Schlaufe jedem Vektor einige Eigenschaften, darunter Farbe, Komponenten usw., zugewiesen. Sobald dies für alle Vektoren durchgespielt wurde, kann die Animation beginnen. Das Programm legt eine virtuelle Landschaft über die in der Website konstruierte Ebene, während die Vektoren sinngemäss eine Flüssigkeit darstellen und damit die hügelige Landschaft umfliessen. Im Animations-Dashboard wurde dies anhand der Störfaktoren 1 und 2 implementiert. Das Verhalten der Animation hängt aber nicht nur von den Störfaktoren ab, sondern kann auch durch die Anpassung der Länge der Vektoren (hier: Geschwindigkeit) beeinflusst werden. Der/die Nutzer/-in hat also die Möglichkeit, direkten Einfuss auf die Animation zu nehmen. \n\n Was rechnet das Programm denn im Hintergrund? Die Nutzereingaben werden in einige simple Funktionen gefüttert. Wie bereits erwähnt kümmert sich eine davon im die Initialisierung der Animation und wird nur einmalig abgespielt.  Im folgenden werden den Vektoren deren Komponenten zugeschrieben. Diese werden vorher mittels sin() und cos() manipuliert und mit den Störfaktoren in Zusammenhang gesetzt. Von diesem Punkt an läuft die Animation. Veränderungen werden nur noch vorgenommen, wenn der/die Nutzer/-in die Parameter verändert oder, wenn das System einen Zufallsfaktor hinzufügt. Es ist nämlich so, dass das Programm in einem Zeitintervall von 60 Sekunden die Landschaft im Hintergrund verändert und damit auch das Bild der Animation beeinflusst. \n\n Was zeichnet das Programm aus? Mittels einfacher trigonometrischer Funktionen lässt sich eine interessante Fluidsimulation programmieren. Ist es nicht faszinierend, wie scheinbar triviale Zahlenfolgen ein solch lebendiges, flüssiges Muster erzeugen? Es lohnt sich, der Animation Zeit zu geben und nach dem Verändern der Parameter die Entwicklung der Bewegung abzuwarten! Weniger ist hier mehr: das Programm entwickelt dann beinahe ein Eigenleben. \n\n Viel Spass beim Ausprobieren! \n\n Herzliche Grüsse \n Nicolas Huber')"><p>Wie funktioniert diese Seite?</p></a>
+                <a href="" onclick="alert('Abstract \n\n Ist es nicht faszinierend, wie ein Computer mit scheinbar trivialen Zahlenfolgen ein derart lebendiges, reges Bild erzeugen kann? Bescheidene Mathematik, simple Programmierung und doch erscheint die Animation ganz dynamisch! Wenn man versucht, sich für eine Weile auf die Bewegungen zu fokussieren, entdeckt man plötzlich die spannendsten Formen. Blitze, Windsysteme, Regen - die Animation hat viel zu bieten. Gehe selbst auf Entdeckungstour! Viel Spass beim Ausprobieren. ')"><p>Designer's Note</p></a>
+                <a href="https://github.com/nicolashuberIT/moving-focus"><p>Quellcode</p></a>
             </div>
 
-            <br>
-
-            <div>
-                <p>Störfaktor 1:</p>
-                <br>
-                <input id="input-noiseScale" class="input-noiseScale" type="range" value="0.02" min="0.002" max="1" step="0.002" oninput="noiseScale_value.innerText = this.value">
-                <p id="noiseScale_value">0.02</p>
-            </div>
-
-            <br>
-
-            <div>
-                <p>Störfaktor 2:</p>
-                <br>
-                <input id="input-noiseScale2" class="input-noiseScale2" type="range" value="0.02" min="-10" max="10" step="1" oninput="noiseScale_value2.innerText = this.value">
-                <p id="noiseScale_value2">1</p>
-            </div>
-
-            <br>
-
-            <input class="input-submit" type="button" value="Parameter anpassen" onclick="getInput()">
-
-            <br><br>
-
-            <p>Viel Spass beim Ausprobieren!</p>
-
-        </i>
-    </div>
-</div>
-
-<div class="buttons">
-
-    <div class="buttons-header">
-        <h3>About</h3>
-    </div>
-    <div class="buttons-values">
-
-        <div>
-            <a href="" onclick="alert('Herzlich Willkommen auf dieser Website! \n\n Um das Potenzial der eingebetteten Animation voll auszuschöpfen, ist es lohnenswert, sich kurz mit der Funktionsweise und der Programmierung auseinanderzusetzen. Eine kurze Dokumentation sowie der Quellcode finden sich auf GitHub unter dem folgenden Link: https://github.com/nicolashuberIT/moving-focus \n\n Nun also zur Programmierung der Animation: Zunächst generiert das Programm eine vordefinierte Anzahl Vektoren, by default 25000, die daraufhin in einem Array abgelegt werden. Nun werden in einer Schlaufe jedem Vektor einige Eigenschaften, darunter Farbe, Komponenten usw., zugewiesen. Sobald dies für alle Vektoren durchgespielt wurde, kann die Animation beginnen. Das Programm legt eine virtuelle Landschaft über die in der Website konstruierte Ebene, während die Vektoren sinngemäss eine Flüssigkeit darstellen und damit die hügelige Landschaft umfliessen. Im Animations-Dashboard wurde dies anhand der Störfaktoren 1 und 2 implementiert. Das Verhalten der Animation hängt aber nicht nur von den Störfaktoren ab, sondern kann auch durch die Anpassung der Länge der Vektoren (hier: Geschwindigkeit) beeinflusst werden. Der/die Nutzer/-in hat also die Möglichkeit, direkten Einfuss auf die Animation zu nehmen. \n\n Was rechnet das Programm denn im Hintergrund? Die Nutzereingaben werden in einige simple Funktionen gefüttert. Wie bereits erwähnt kümmert sich eine davon im die Initialisierung der Animation und wird nur einmalig abgespielt.  Im folgenden werden den Vektoren deren Komponenten zugeschrieben. Diese werden vorher mittels sin() und cos() manipuliert und mit den Störfaktoren in Zusammenhang gesetzt. Von diesem Punkt an läuft die Animation. Veränderungen werden nur noch vorgenommen, wenn der/die Nutzer/-in die Parameter verändert oder, wenn das System einen Zufallsfaktor hinzufügt. Es ist nämlich so, dass das Programm in einem Zeitintervall von 60 Sekunden die Landschaft im Hintergrund verändert und damit auch das Bild der Animation beeinflusst. \n\n Was zeichnet das Programm aus? Mittels einfacher trigonometrischer Funktionen lässt sich eine interessante Fluidsimulation programmieren. Ist es nicht faszinierend, wie scheinbar triviale Zahlenfolgen ein solch lebendiges, flüssiges Muster erzeugen? Es lohnt sich, der Animation Zeit zu geben und nach dem Verändern der Parameter die Entwicklung der Bewegung abzuwarten! Weniger ist hier mehr: das Programm entwickelt dann beinahe ein Eigenleben. \n\n Viel Spass beim Ausprobieren! \n\n Herzliche Grüsse \n Nicolas Huber')"><p>Wie funktioniert diese Seite?</p></a>
-            <a href="" onclick="alert('Abstract \n\n Ist es nicht faszinierend, wie ein Computer mit scheinbar trivialen Zahlenfolgen ein derart lebendiges, reges Bild erzeugen kann? Bescheidene Mathematik, simple Programmierung und doch erscheint die Animation ganz dynamisch! Wenn man versucht, sich für eine Weile auf die Bewegungen zu fokussieren, entdeckt man plötzlich die spannendsten Formen. Blitze, Windsysteme, Regen - die Animation hat viel zu bieten. Gehe selbst auf Entdeckungstour! Viel Spass beim Ausprobieren. ')"><p>Designer's Note</p></a>
-            <a href="https://github.com/nicolashuberIT/moving-focus"><p>Quellcode</p></a>
         </div>
 
     </div>
 
-</div>
-
-<div>
-    <script src = "js/particles.js"></script>
-</div>
+    <div>
+        <script src = "js/particles.js"></script>
+    </div>
 
 </body>
 

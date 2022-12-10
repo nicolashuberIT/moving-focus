@@ -1,4 +1,4 @@
-// --- variables ---
+// ------ PARAMETERS ------ //
 
 let vectors = [];
 const num = 25000;
@@ -6,22 +6,18 @@ var noiseScale = 0.02;
 var noiseScale2 = 1;
 var velocity = 2;
 
-// dimensions
+// ------ DIMENSIONS ------ //
 
 var Width = window.innerWidth;
 var Height = window.innerHeight;
 
 displayValues();
 
-// --- colours ---
+// ------ COLOURS ------ //
 
 var color_hex = "#7D968F";
 
-var strokeR = 125;
-var strokeG = 150;
-var strokeB = 143;
-
-// user input
+// ------ USER INPUT ------//
 
 function getInput(){
    getVelocity();
@@ -46,8 +42,17 @@ function getNoise2(){
     return noiseScale2;
 }
 
+function displayValues() {
+    document.getElementById("width").textContent = "Breite " + Width + " px";
+    document.getElementById("height").textContent = "Höhe " + Height + " px";
+    document.getElementById("num").textContent = "Anzahl Vektoren: " + num;
+    document.getElementById("color").textContent = "Farbe (hex): " + color_hex;
+    document.getElementById("noiseScale").textContent = "Störfaktor 1: " + getNoise();
+    document.getElementById("noiseScale2").textContent = "Störfaktor 2: " + getNoise2();
+    document.getElementById("velocity").textContent = "Geschwindigkeit: " + getVelocity();
+}
 
-// --- setup ---
+// ------ SETUP ANIMATION ------ //
 
 function setup() {
     createCanvas(Width, Height);
@@ -57,7 +62,7 @@ function setup() {
     stroke(color_hex);
 }
 
-// --- draw vectors ---
+// ------ ANIMATION ------ //
 
 function draw() {
     background(0, 10);
@@ -76,37 +81,17 @@ function draw() {
     }
 }
 
-// --- mouseReleased ---
-
 function randomChange() {
     draw();
     noiseSeed(millis()*sin(velocity));
 }
 
-// --- onScreen ---
-
 function onScreen(v) {
     return v.x >= 0 && v.x <= width && v.y >= 0 && v.y <= height;
 }
 
-// --- interval ---
-
 var intervalID = window.setInterval(randomChange, 60000);
-
-// --- random integer value ---
 
 function randomIntFromInterval(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-// display values in html
-
-function displayValues() {
-    document.getElementById("width").textContent = "Breite " + Width + " px";
-    document.getElementById("height").textContent = "Höhe " + Height + " px";
-    document.getElementById("num").textContent = "Anzahl Vektoren: " + num;
-    document.getElementById("color").textContent = "Farbe (hex): " + color_hex;
-    document.getElementById("noiseScale").textContent = "Störfaktor 1: " + getNoise();
-    document.getElementById("noiseScale2").textContent = "Störfaktor 2: " + getNoise2();
-    document.getElementById("velocity").textContent = "Geschwindigkeit: " + getVelocity();
 }
