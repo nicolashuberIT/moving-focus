@@ -2,11 +2,14 @@
   position: absolute;
   background-color: rgb(255, 255, 255, 0.3);
   border-radius: 5px;
-  height: 720px;
+  height: 545px;
   width: 260px;
   top: 20px;
   left: 20px;
   color: rgb(200, 200, 200);
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: block;
 }
 
 .dashboard-header {
@@ -16,9 +19,44 @@
 
 .dashboard-values {
   position: relative;
-  top: 325px;
+  top: 235px;
   transform: translate(0, -50%);
   padding: 20px;
+}
+
+.buttons {
+  position: absolute;
+  background-color: rgb(255, 255, 255, 0.3);
+  border-radius: 5px;
+  height: 115px;
+  width: 260px;
+  top: 570px;
+  left: 20px;
+  color: rgb(200, 200, 200);
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: block;
+}
+
+.buttons-header {
+  position: relative;
+  padding: 20px;
+}
+
+.buttons-values {
+  position: relative;
+  top: 10px;
+  transform: translate(0, -50%);
+  padding: 20px;
+}
+
+.buttons-values a{
+  color: rgb(200, 200, 200);
+}
+
+.buttons-values a:hover {
+  color: black;
+  opacity: 1;
 }
 
 .input-num{
@@ -98,6 +136,10 @@ body{
   text-align: center;
   color: #fff;
   font-size: 20px;
+}
+
+.context button{
+  position: center;
 }
 
 

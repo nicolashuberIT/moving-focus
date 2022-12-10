@@ -1,7 +1,7 @@
 // --- variables ---
 
 let vectors = [];
-var num = 35000;
+const num = 25000;
 var noiseScale = 0.02;
 var noiseScale2 = 1;
 var velocity = 2;
@@ -15,6 +15,8 @@ displayValues();
 
 // --- colours ---
 
+var color_hex = "#7D968F";
+
 var strokeR = 125;
 var strokeG = 150;
 var strokeB = 143;
@@ -22,17 +24,11 @@ var strokeB = 143;
 // user input
 
 function getInput(){
-   getNum();
    getVelocity();
    getNoise();
    getNoise2();
    displayValues()
    draw();
-}
-
-function getNum(){
-    num = document.getElementById('num_value').textContent;
-    return num;
 }
 
 function getVelocity(){
@@ -58,7 +54,7 @@ function setup() {
     for(let i = 0; i < num; i ++) {
         vectors.push(createVector(random(width), random(height)));
     }
-    stroke(strokeR, strokeG, strokeB);
+    stroke(color_hex);
 }
 
 // --- draw vectors ---
@@ -108,8 +104,8 @@ function randomIntFromInterval(min, max){
 function displayValues() {
     document.getElementById("width").textContent = "Breite " + Width + " px";
     document.getElementById("height").textContent = "Höhe " + Height + " px";
-    document.getElementById("color").textContent = "Farbe (hex): ";
-    document.getElementById("num").textContent = "Anzahl Vektoren: " + getNum();
+    document.getElementById("num").textContent = "Anzahl Vektoren: " + num;
+    document.getElementById("color").textContent = "Farbe (hex): " + color_hex;
     document.getElementById("noiseScale").textContent = "Störfaktor 1: " + getNoise();
     document.getElementById("noiseScale2").textContent = "Störfaktor 2: " + getNoise2();
     document.getElementById("velocity").textContent = "Geschwindigkeit: " + getVelocity();
