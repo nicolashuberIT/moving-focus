@@ -12,4 +12,3 @@ __________
 _references:_
 * _Perlin Flow Fields in JavaScript + P5js: https://www.youtube.com/watch?v=sZBfLgfsvSk, [02.11.2022; 09 AM]._
 * _Basic fluid animation: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa182bkZxYXozdnBKbTY1TEJsT1JfWnd5TlJfUXxBQ3Jtc0tsYXNiQ0dhV3RDeVBjc1Y5WGF4MGtMR1BnZUFFQUdqaF83SzJGUG03M3hLNUV6LUE4VWx5WDQzVGlVc21yTEtrS2ZXOVowMzFSdkVyZ2k0VmVCRVl6NllCUDZJNl9rNVl3Vl9PaWVvLWRudVUtWW5CZw&q=https%3A%2F%2Feditor.p5js.org%2FBarneyCodes%2Fsketches%2F2eES4fBEL&v=sZBfLgfsvSk [02.11.2022; 09 AM]._
-* _index.html animation: https://codepen.io [02.11.2022; 09 AM]._
